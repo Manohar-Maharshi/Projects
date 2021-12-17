@@ -13,7 +13,7 @@ import Pro from '@/routes/pro'
 
 const App = () => {
 	return (
-		<div className="container mx-auto px-3">
+		<div className="container mx-auto md:px-3">
 			<Header />
 			<NavBar />
 			<Routes>
