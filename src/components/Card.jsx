@@ -10,12 +10,15 @@ const Card = (data) => {
 		if(icon === "github"){
 			return <Icon icon="akar-icons:github-fill" className="fill-white w-3.5 h-3.5" />
 		}
+		if(icon === "react"){
+			return <Icon  icon="vscode-icons:file-type-reactjs" className="fill-white w-3.5 h-3.5" />
+		}
 		return <Icon icon={`vscode-icons:file-type-${icon}`} className="w-4 h-4"/>
 	}
 	return (
-		<div className="group hover:shadow-pink-600 shadow relative h-[16.5rem] max-h-[17.5rem] bg-gray-800 rounded-xl p-3 w-[18rem] md:w-[17rem]">
+		<div className="group hover:shadow-pink-600 shadow relative h-full md:h-[16.5rem] md:max-h-[17.5rem] bg-gray-800 rounded-xl p-3 w-[20rem] md:w-[17rem]">
 			<a href={data?.data?.deployLink}>
-				<img className=" w-full h-[8rem] max-h-[9rem] rounded-xl object-cover" src={data?.data?.thumb?.url} alt={data?.data?.title} />	
+				<img className=" w-full h-[10rem] md:h-[8rem] max-h-[13rem] rounded-xl object-cover" src={data?.data?.thumb?.url} alt={data?.data?.title} />	
 			</a>
 			<div className="mt-2.5">
 				<a href={data?.data?.repoUrl} className="group-hover:text-pink-500 line-clamp-2 my-1 text-xl font-bold leading-tight tacking-wide text-gray-300">{data?.data?.title}</a>
